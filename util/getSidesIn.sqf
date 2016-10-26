@@ -2,7 +2,10 @@ params ["_units"];
 
 _sides = [];
 {
-	_ = _sides pushBackUnique (side _x);
-} forEach _units;
+	if (_x countSide _units > 0) then
+	{
+		_ = _sides pushBackUnique _x;
+	};
+} forEach [west, east, resistance, civilian, sideUnknown];
 
 _sides

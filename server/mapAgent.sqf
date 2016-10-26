@@ -4,9 +4,6 @@ private ["_z", "_zones", "_marker", "_players", "_sides", "_winner", "_score"];
 
 _z = allMapMarkers;
 _zones = [];
-score_totals = [0, 0, 0];
-publicVariable "score_totals";
-
 
 {
 	if (markerShape _x == "RECTANGLE")	then
@@ -37,10 +34,9 @@ while {true} do
 		sleep .02;
 	} forEach _zones;
 	
-	score_totals set [0, (score_totals select 0) + (_score select 0)];
-	score_totals set [1, (score_totals select 1) + (_score select 1)];
-	score_totals set [2, (score_totals select 2) + (_score select 2)];
-	publicVariable "score_totals";
+	east addScoreSide  ((_score select 0) / ((playersNumber east) + 1)) * (count allPlayers + 1);
+	west addScoreSide  ((_score select 1) / ((playersNumber west) + 1)) * (count allPlayers + 1);
+	resistance addScoreSide  ((_score select 2) / ((playersNumber resistance) + 1)) * (count allPlayers + 1);
 	
 	sleep 5;
 };

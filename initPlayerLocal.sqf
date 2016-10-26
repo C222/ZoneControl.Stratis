@@ -1,5 +1,4 @@
-titleText ["Waiting for Server", "BLACK", 0];
-waitUntil{!(isNil "score_totals")};
+titleText ["Please Wait...", "BLACK", 0];
 
 titleFadeOut 1;
 

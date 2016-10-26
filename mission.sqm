@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=38;
+		nextID=39;
 	};
 	class MarkerIDProvider
 	{
-		nextID=14;
+		nextID=15;
 	};
 	class Camera
 	{
-		pos[]={2954.3633,48.846649,6248.7651};
-		dir[]={-0.11257277,-0.35587642,-0.92775273};
-		up[]={-0.04286987,0.93453193,-0.35330111};
-		aside[]={-0.99274611,1.33703e-007,0.12045852};
+		pos[]={2863.7646,27.532869,6043.7437};
+		dir[]={0.5468666,-0.80545241,-0.22856607};
+		up[]={0.74315339,0.59267157,-0.310606};
+		aside[]={-0.38564095,1.9127037e-007,-0.92268515};
 	};
 };
 binarizationWanted=0;
@@ -378,7 +378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=24;
+		items=15;
 		class Item0
 		{
 			dataType="Marker";
@@ -943,7 +943,7 @@ class Mission
 		class Item12
 		{
 			dataType="Marker";
-			position[]={2726.9829,2.4420959e+020,5783.5049};
+			position[]={2735.665,2.4420959e+020,5781.2119};
 			name="respawn_west";
 			type="Empty";
 			id=26;
@@ -952,11 +952,11 @@ class Mission
 		class Item13
 		{
 			dataType="Marker";
-			position[]={3254.6521,3.2696841e+011,5767.8242};
-			name="respawn_resistance";
+			position[]={3260.0269,4.049962e+018,5778.856};
+			name="respawn_guerrila";
 			type="Empty";
 			id=27;
-			atlOffset=3.2696841e+011;
+			atlOffset=4.049962e+018;
 		};
 		class Item14
 		{
@@ -966,87 +966,6 @@ class Mission
 			type="Empty";
 			id=28;
 			atlOffset=2883.7742;
-		};
-		class Item15
-		{
-			dataType="Marker";
-			position[]={2752.4619,2.4420959e+020,5745.9531};
-			name="respawn_west_1";
-			type="Empty";
-			id=29;
-			atlOffset=2.4420959e+020;
-		};
-		class Item16
-		{
-			dataType="Marker";
-			position[]={2750.4685,2.4420959e+020,5770.9912};
-			name="respawn_west_2";
-			type="Empty";
-			id=30;
-			atlOffset=2.4420959e+020;
-		};
-		class Item17
-		{
-			dataType="Marker";
-			position[]={2731.0127,2.4420959e+020,5817.5576};
-			name="respawn_west_3";
-			type="Empty";
-			id=31;
-			atlOffset=2.4420959e+020;
-		};
-		class Item18
-		{
-			dataType="Marker";
-			position[]={2956.7039,2912.1738,6210.0752};
-			name="respawn_east_1";
-			type="Empty";
-			id=32;
-			atlOffset=2883.7744;
-		};
-		class Item19
-		{
-			dataType="Marker";
-			position[]={2948.8589,2912.1233,6208.0034};
-			name="respawn_east_2";
-			type="Empty";
-			id=33;
-			atlOffset=2883.801;
-		};
-		class Item20
-		{
-			dataType="Marker";
-			position[]={2952.8555,2912.1165,6202.3286};
-			name="respawn_east_3";
-			type="Empty";
-			id=34;
-			atlOffset=2883.7822;
-		};
-		class Item21
-		{
-			dataType="Marker";
-			position[]={3262.5303,3.2696841e+011,5762.7217};
-			name="respawn_resistance_1";
-			type="Empty";
-			id=35;
-			atlOffset=3.2696841e+011;
-		};
-		class Item22
-		{
-			dataType="Marker";
-			position[]={3251.5149,3.2696841e+011,5772.0161};
-			name="respawn_resistance_2";
-			type="Empty";
-			id=36;
-			atlOffset=3.2696841e+011;
-		};
-		class Item23
-		{
-			dataType="Marker";
-			position[]={3260.5681,3.2696841e+011,5768.7119};
-			name="respawn_resistance_3";
-			type="Empty";
-			id=37;
-			atlOffset=3.2696841e+011;
 		};
 	};
 };
