@@ -1,1 +1,1 @@
-# Zone Control: Altis
+# Zone Control: Stratis
