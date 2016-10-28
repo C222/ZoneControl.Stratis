@@ -1,9 +1,10 @@
 diag_log "Starting mapAgent";
 
-private ["_z", "_zones", "_marker", "_players", "_sides", "_winner", "_score"];
+private ["_z", "_zones", "_marker", "_players", "_sides", "_winner", "_score", "_respawns"];
 
 _z = allMapMarkers;
 _zones = [];
+_respawns = [];
 
 {
 	if (markerShape _x == "RECTANGLE")	then
@@ -14,7 +15,14 @@ _zones = [];
 
 while {true} do
 {
+
+	{
+		_x call BIS_fnc_removeRespawnPosition;
+	} forEach _respawns;
+	
 	_score = [0, 0, 0];
+	_respawns = [];
+	
 	{
 		_marker = _x;
 		
@@ -23,6 +31,11 @@ while {true} do
 		_sides = _sides - [civilian, sideUnknown];
 		
 		_winner = [_marker, _sides] call util_fnc_makeColor;
+		
+		if (_winner != sideEmpty) then
+		{
+			_respawns pushBack ([_winner, markerPos _marker] call BIS_fnc_addRespawnPosition);
+		};
 		
 		switch _winner do 
 		{

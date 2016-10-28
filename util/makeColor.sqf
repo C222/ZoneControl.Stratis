@@ -2,7 +2,7 @@ params ["_marker", "_sides"];
 
 private ["_side", "_winner"];
 
-_winner = 0;
+_winner = sideEmpty;
 
 if ((count _sides) > 1) then
 {
