@@ -1,6 +1,8 @@
 diag_log "Starting mapAgent";
 
-private ["_z", "_zones", "_marker", "_players", "_sides", "_winner", "_score", "_respawns"];
+private ["_z", "_zones", "_marker", "_winner", "_score", "_respawns", "_scalar", "_limit"];
+
+_limit = "ScoreLimit" call BIS_fnc_getParamValue;
 
 _z = allMapMarkers;
 _zones = [];
@@ -26,11 +28,9 @@ while {true} do
 	{
 		_marker = _x;
 		
-		_players = [_marker] call util_fnc_playersWithin;
-		_sides = [_players] call util_fnc_getSidesIn;
-		_sides = _sides - [civilian, sideUnknown];
+		_winner = [_marker] call util_fnc_pickWinner;
 		
-		_winner = [_marker, _sides] call util_fnc_makeColor;
+		[_marker, _winner] call util_fnc_makeColor;
 		
 		if (_winner != sideEmpty) then
 		{
@@ -47,9 +47,15 @@ while {true} do
 		sleep .02;
 	} forEach _zones;
 	
-	east addScoreSide  ((_score select 0) / ((playersNumber east) + 1)) * (count allPlayers + 1);
-	west addScoreSide  ((_score select 1) / ((playersNumber west) + 1)) * (count allPlayers + 1);
-	resistance addScoreSide  ((_score select 2) / ((playersNumber resistance) + 1)) * (count allPlayers + 1);
+	_scalar = (count allPlayers + 1) * 2.5;
+	east addScoreSide  ceil (((_score select 0) / ((playersNumber east) + 1)) * _scalar);
+	west addScoreSide  ceil (((_score select 1) / ((playersNumber west) + 1)) * _scalar);
+	resistance addScoreSide  ceil (((_score select 2) / ((playersNumber resistance) + 1)) * _scalar);
+	
+	if (scoreSide east > _limit or scoreSide west > _limit or scoreSide resistance > _limit) then
+	{
+		"SideScore" call BIS_fnc_endMissionServer;
+	};
 	
 	sleep 5;
 };

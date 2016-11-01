@@ -21,6 +21,10 @@ class util
 		{
 			file = "util\makeColor.sqf";
 		};
+		class pickWinner
+		{
+			file = "util\pickWinner.sqf";
+		};
 	};
 };
 

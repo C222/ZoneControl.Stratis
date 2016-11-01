@@ -1,30 +1,25 @@
-params ["_marker", "_sides"];
+params ["_marker", "_side"];
 
-private ["_side", "_winner"];
-
-_winner = sideEmpty;
-
-if ((count _sides) > 1) then
+switch _side do 
 {
-	_marker setMarkerColor "ColorOrange";
-} else
-{
-	if ((count _sides) == 1) then
-	{
-		_side = _sides select 0;
-		_winner = _side;
+	case sideUnknown: {
 		_marker setMarkerAlpha 1;
-		switch _side do 
-		{
-			case resistance: {_marker setMarkerColor "ColorGUER";};
-			case east: {_marker setMarkerColor "ColorEAST";};
-			case west: {_marker setMarkerColor "ColorWEST";};
-		};
-	} else
-	{
-		_marker setMarkerColor "ColorWhite";
+		_marker setMarkerColor "ColorOrange";
+	};
+	case resistance: {
+		_marker setMarkerAlpha 1;
+		_marker setMarkerColor "ColorGUER";
+	};
+	case east: {
+		_marker setMarkerAlpha 1;
+		_marker setMarkerColor "ColorEAST";
+	};
+	case west: {
+		_marker setMarkerAlpha 1;
+		_marker setMarkerColor "ColorWEST";
+	};
+	default {
 		_marker setMarkerAlpha 0.25;
+		_marker setMarkerColor "ColorWhite";
 	};
 };
-
-_winner

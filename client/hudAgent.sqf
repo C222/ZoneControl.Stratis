@@ -2,8 +2,9 @@ diag_log "Starting hudAgent";
 
 disableSerialization;
 
-private ["_ui", "_major_hud", "_bl_hud", "_br_hud"];
+private ["_ui", "_major_hud", "_bl_hud", "_br_hud", "_limit"];
 
+_limit = "ScoreLimit" call BIS_fnc_getParamValue;
 
 // switch (side player) do
 // {
@@ -36,7 +37,7 @@ while {true} do
 	
 	if (alive player) then
 	{
-		_major_hud ctrlSetStructuredText parseText format ["%1 %2", scoreSide (side player), (side player)];
+		_major_hud ctrlSetStructuredText parseText format ["%1/%2 %3", scoreSide (side player), _limit, (side player)];
 
 		switch (side player) do
 		{
