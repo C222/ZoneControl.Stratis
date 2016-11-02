@@ -50,6 +50,10 @@ class server
 		{
 			file = "server\mapAgent.sqf";
 		};
+		class addInventories
+		{
+			file = "server\addInventories.sqf";
+		};
 	};
 };
 
