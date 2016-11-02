@@ -52,7 +52,7 @@ while {true} do
 	west addScoreSide  ceil (((_score select 1) / ((playersNumber west) + 1)) * _scalar);
 	resistance addScoreSide  ceil (((_score select 2) / ((playersNumber resistance) + 1)) * _scalar);
 	
-	if (scoreSide east > _limit or scoreSide west > _limit or scoreSide resistance > _limit) then
+	if (scoreSide east > _limit or scoreSide west > _limit or scoreSide resistance > _limit) exitWith
 	{
 		"SideScore" call BIS_fnc_endMissionServer;
 	};
