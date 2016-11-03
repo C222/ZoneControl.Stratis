@@ -2,6 +2,8 @@
 
 An ArmA 3 mission where teams capture zones and engage in urban combat.
 
+![Map Screenshot](http://i.imgur.com/nAn0mo8.jpg)
+
 ## Version 1: Stratis
 
 - [x] Respawns
