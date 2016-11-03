@@ -7,6 +7,7 @@ An ArmA 3 mission where teams capture zones and engage in urban combat.
 - [x] Respawns
 - [x] Rectangular Markers are Zones
 - [x] Layout Zones on Stratis
+- [x] Basic HUD
 - [x] Points and Win Condition
 - [x] Role / Loadout Selection
 - [ ] Dynamic Weather and Fog
@@ -16,8 +17,10 @@ An ArmA 3 mission where teams capture zones and engage in urban combat.
 ## Version 2: Altis
 
 - [ ] Layout Zones on Stratis
+- [ ] Add Capture Zones to HUD
 - [ ] Vehicle Purchace in Captured Zone
 - [ ] More Customized Loadouts
+- [ ] Add Zones and Teammates(?) to HUD
 
 ## Version 3: Pripyat
 
