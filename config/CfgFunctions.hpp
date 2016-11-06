@@ -54,6 +54,10 @@ class server
 		{
 			file = "server\addInventories.sqf";
 		};
+		class weatherAgent
+		{
+			file = "server\weatherAgent.sqf";
+		};
 	};
 };
 
@@ -64,6 +68,10 @@ class client
 		class hudAgent
 		{
 			file = "client\hudAgent.sqf";
+		};
+		class weatherSync
+		{
+			file = "client\weatherSync.sqf";
 		};
 	};
 };

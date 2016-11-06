@@ -7,6 +7,7 @@ diag_log format ["Loading inventories."];
 
 diag_log format ["Spawning server agents."];
 [] spawn server_fnc_mapAgent;
+[] spawn server_fnc_weatherAgent;
 
 sleep 5;
 readyForSpawn = true;
