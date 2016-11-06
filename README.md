@@ -12,7 +12,7 @@ An ArmA 3 mission where teams capture zones and engage in urban combat.
 - [x] Basic HUD
 - [x] Points and Win Condition
 - [x] Role / Loadout Selection
-- [ ] Dynamic Weather and Fog
+- [x] Dynamic Weather and Fog
 - [ ] Dynamic Loadout Unlock with Zone
 - [ ] Equipment Purchace in Captured Zone
 
