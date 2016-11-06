@@ -23,18 +23,18 @@ private ["_lastrain", "_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_re
 // Real time vs fast time
 // true: Real time is more realistic weather conditions change slowly (ideal for persistent game)
 // false: fast time give more different weather conditions (ideal for non persistent game) 
-_realtime = true;
+_realtime = false;
 
 // Random time before new forecast
 // true: forecast happens bewteen mintime and maxtime
 // false: forecast happens at mintime
-_random = false;
+_random = true;
 
 // Min time seconds (real time) before a new weather forecast
-_mintime = 90;
+_mintime = 300;
 
 // Max time seconds (real time) before a new weather forecast
-_maxtime = 600;
+_maxtime = 1200;
 
 // If Fastime is on
 // Ratio 1 real time second for x game time seconds
@@ -76,7 +76,6 @@ setdate (wcweather select 4);
 
 	while { true } do {
 		wcweather set [4, date];
-		diag_log format ["Server: %1", wcweather];
 		publicvariable "wcweather";
 		if(!_realtime) then { 
 			if((date select 3 > 16) or (date select 3 <6)) then {
@@ -102,9 +101,9 @@ while {true} do {
 	};
 	if((date select 3 > 2) and (date select 3 <6)) then {
 		if(random 1 > 0.75) then {
-			_fog = 0.4 + (random 0.6);
+			_fog = random [0.4, .7, 1.0];
 		} else {
-			_fog = 0.1 + (random 0.3);
+			_fog = random [0.1, 0.25, 0.4];
 		};
 	} else {
 		if((_lastrain > 0.6) and (_rain < 0.2)) then {
@@ -128,5 +127,7 @@ while {true} do {
 	if(_random) then {
 		_timeforecast = _mintime + (random (_maxtime - _mintime));
 	};
+	diag_log format ["New Weather: Rain %1, Fog %2, Overcast %3, Wind %4", _rain, _fog, _overcast, _wind];
+	diag_log format ["Next Weather %1", _timeforecast];
 	sleep _timeforecast;
 };
