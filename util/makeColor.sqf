@@ -1,25 +1,16 @@
 params ["_marker", "_side"];
 
-switch _side do 
+if (_side == sideUnknown) exitWith
 {
-	case sideUnknown: {
-		_marker setMarkerAlpha 1;
-		_marker setMarkerColor "ColorOrange";
-	};
-	case resistance: {
-		_marker setMarkerAlpha 1;
-		_marker setMarkerColor "ColorGUER";
-	};
-	case east: {
-		_marker setMarkerAlpha 1;
-		_marker setMarkerColor "ColorEAST";
-	};
-	case west: {
-		_marker setMarkerAlpha 1;
-		_marker setMarkerColor "ColorWEST";
-	};
-	default {
-		_marker setMarkerAlpha 0.25;
-		_marker setMarkerColor "ColorWhite";
-	};
+	_marker setMarkerAlpha 1;
+	_marker setMarkerColor "ColorOrange";
 };
+
+if (_side == resistance or _side == east or _side == west) exitWith
+{
+	_marker setMarkerAlpha 1;
+	_marker setMarkerColor ([_side, true] call BIS_fnc_sideColor);
+};
+
+_marker setMarkerAlpha 0.25;
+_marker setMarkerColor "ColorWhite";
