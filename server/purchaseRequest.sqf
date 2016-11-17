@@ -7,7 +7,13 @@ private _weapon_cargo = _location getVariable "weapon_cargo";
 private _magazine_cargo = _location getVariable "magazine_cargo";
 private _price = _location getVariable "price";
 
-_pos = position _player findEmptyPosition [0, 5, _vehicle_name];
-_weapon_holder = createVehicle [_vehicle_name, _pos, [], 0, "can_collide"]; 
-_weapon_holder addWeaponCargoGlobal _weapon_cargo; 
-_weapon_holder addMagazineCargoGlobal _magazine_cargo;
+diag_log format ["%1 attempted to purchase [%2, %3] for %4 at score %5", name _player, _vehicle_name, _weapon_cargo, _price, scoreSide side _player];
+
+if ((markerColor _marker == [side _player, true] call BIS_fnc_sideColor) and (scoreSide side _player >= _price)) then
+{
+	side _player addScoreSide (-1 * _price);
+	_pos = position _player findEmptyPosition [0, 5, _vehicle_name];
+	_weapon_holder = createVehicle [_vehicle_name, _pos, [], 0, "can_collide"]; 
+	_weapon_holder addWeaponCargoGlobal _weapon_cargo; 
+	_weapon_holder addMagazineCargoGlobal _magazine_cargo;
+};
