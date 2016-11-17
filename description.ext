@@ -18,6 +18,7 @@ class CfgFunctions
 class CfgRemoteExecCommands
 {
 	class hint {};
+	class server_fnc_purchaseRequest {};
 };
 
 startFogBase = 10.0;          // base altitude for fog computations (in meters)

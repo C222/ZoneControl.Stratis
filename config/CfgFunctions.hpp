@@ -54,9 +54,17 @@ class server
 		{
 			file = "server\addInventories.sqf";
 		};
+		class addPurchaseLocations
+		{
+			file = "server\addPurchaseLocations.sqf";
+		};
 		class weatherAgent
 		{
 			file = "server\weatherAgent.sqf";
+		};
+		class purchaseRequest
+		{
+			file = "server\purchaseRequest.sqf";
 		};
 	};
 };
@@ -72,6 +80,10 @@ class client
 		class weatherSync
 		{
 			file = "client\weatherSync.sqf";
+		};
+		class addActions
+		{
+			file = "client\addActions.sqf";
 		};
 	};
 };

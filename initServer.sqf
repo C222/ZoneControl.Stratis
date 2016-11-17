@@ -4,6 +4,8 @@ diag_log format ["ZoneControl Server - Initilizing Server"];;
 
 diag_log format ["Loading inventories."];
 [] call server_fnc_addInventories;
+diag_log format ["Loading Purchase Locations."];
+[] call server_fnc_addPurchaseLocations;
 
 diag_log format ["Spawning server agents."];
 [] spawn server_fnc_mapAgent;
