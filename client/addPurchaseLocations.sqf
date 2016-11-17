@@ -2,7 +2,6 @@
 	private _marker_name = _x select 0;
 	private _vehicle_name = _x select 1;
 	private _weapon_cargo = _x select 2;
-	private _magazine_cargo = _x select 3;
 	private _price = _x select 4;
 	
 	private _location_text = "";
@@ -22,8 +21,4 @@
 	_location setText format ["%1 [%2]", _location_text, _price];
 	_location setDirection (markerDir _marker_name);
 	_location setRectangular true;
-	_location setVariable ["vehicle_name", _vehicle_name];
-	_location setVariable ["weapon_cargo", _weapon_cargo];
-	_location setVariable ["magazine_cargo", _magazine_cargo];
-	_location setVariable ["price", _price];
 } forEach ([] call config_fnc_purchaseLocations);

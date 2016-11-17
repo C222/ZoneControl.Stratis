@@ -2,6 +2,10 @@ class config
 {
 	class common
 	{
+		class purchaseLocations
+		{
+			file = "config\purchaseLocations.sqf";
+		};
 	};
 };
 
@@ -84,6 +88,10 @@ class client
 		class addActions
 		{
 			file = "client\addActions.sqf";
+		};
+		class addPurchaseLocations
+		{
+			file = "client\addPurchaseLocations.sqf";
 		};
 	};
 };
