@@ -3,7 +3,7 @@ class ReqUnits
 	title = "Units Required to Capture";
 	values[] = {0, 1, 4, 9, 14};
 	texts[] = {"1", "2", "5", "10", "15"};
-	default = 0;
+	default = 1;
 };
 
 class Daytime
@@ -19,7 +19,7 @@ class Daytime
 class ScoreLimit
 {
 	title = "Points to Win";
-	values[] = {10, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
-	texts[] = {"10", "200", "300", "400", "500", "600", "700", "800", "900", "1000"};
-	default = 600;
+	values[] = {250, 500, 750, 1000, 1500, 2000, 2500, 3500};
+	texts[] = {"250", "500", "750", "1000", "1500", "2000", "2500", "3000"};
+	default = 1000;
 };
