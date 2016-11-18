@@ -13,16 +13,16 @@ An ArmA 3 mission where teams capture zones and engage in urban combat.
 - [x] Points and Win Condition
 - [x] Role / Loadout Selection
 - [x] Dynamic Weather and Fog
-- [ ] Dynamic Loadout Unlock with Zone
-- [ ] Equipment Purchace in Captured Zone
+~~Dynamic Loadout Unlock with Zone~~
+- [x] Equipment Purchace in Captured Zone
 
 ## Version 2: Altis
 
 - [ ] Layout Zones on Stratis
-- [ ] Add Capture Zones to HUD
+- [x] Add Capture Zones to HUD
 - [ ] Vehicle Purchace in Captured Zone
 - [ ] More Customized Loadouts
-- [ ] Add Zones and Teammates(?) to HUD
+- [ ] Add Teammates to HUD (?)
 
 ## Version 3: Pripyat
 

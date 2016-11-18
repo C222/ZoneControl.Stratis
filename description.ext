@@ -1,8 +1,8 @@
 #include "defines.hpp"
 #include "dialogs.hpp"
 
-version = "0.7.0";
-onLoadMission = "Zone Control [0.7.0] - Stratis";
+version = "0.9.0";
+onLoadMission = "Zone Control [0.9.0] - Stratis";
 respawn = "BASE";
 disabledAI = 1;
 author = "C222";
