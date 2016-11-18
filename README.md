@@ -13,8 +13,9 @@ An ArmA 3 mission where teams capture zones and engage in urban combat.
 - [x] Points and Win Condition
 - [x] Role / Loadout Selection
 - [x] Dynamic Weather and Fog
-~~Dynamic Loadout Unlock with Zone~~
 - [x] Equipment Purchace in Captured Zone
+
+~~Dynamic Loadout Unlock with Zone~~
 
 ## Version 2: Altis
 
